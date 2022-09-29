@@ -1,3 +1,5 @@
+# taken from
+# https://github.com/rohan-paul/MachineLearning-DeepLearning-Code-for-my-YouTube-Channel/blob/master/Computer_Vision/Unet-Brain-MRI-Segmentation-Tensorflow-Keras/utils.py
 from keras import backend as K
 # Global Parameter
 smooth = 100
