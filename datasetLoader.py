@@ -3,7 +3,8 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import cv2
 import matplotlib.pyplot as plt
-plt.style.use('ggplot')
+plt.style.use('dark_background')
+#plt.grid(b=None)
 
 
 class DataGenerator:
@@ -34,11 +35,11 @@ class DataGenerator:
             fig.add_subplot(rows, columns, i)
             img_path = self.image_path[i]
             example_mask = self.mask_files[i]
-            image = cv2.imread(img_path)
+            image = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             mask = cv2.imread(example_mask)
             plt.imshow(image)
-            plt.imshow(mask, alpha=0.4)
+            plt.imshow(mask, alpha=0.4, cmap='Reds')
         plt.show()
 
 
